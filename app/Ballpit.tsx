@@ -526,7 +526,7 @@ interface PointerData {
 
 const pointerMap = new Map<HTMLElement, PointerData>();
 
-function createPointerData(options: Partial<PointerData> & { domElement: HTMLElement }): PointerData {
+ function createPointerData(options: Partial<PointerData> & { domElement: HTMLElement }): PointerData {
   const defaultData: PointerData = {
     position: new Vector2(),
     nPosition: new Vector2(),
@@ -648,6 +648,7 @@ function onPointerClick(e: PointerEvent) {
   for (const [elem, data] of pointerMap) {
     const rect = elem.getBoundingClientRect();
     updatePointerData(data, rect);
+    console.log('111')
     if (isInside(rect)) data.onClick(data);
   }
 }
