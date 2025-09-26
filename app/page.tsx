@@ -1,26 +1,9 @@
 'use client';
-import Image from "next/image";
 import Ballpit from "./Ballpit";
 import TextType from "./TextType";
-import Fireworks from "@fireworks-js/react";
-import { useEffect, useRef, useState } from "react";
 
 
 export default function Home() {
-  const [showFire, setShowFire] = useState(false)
-  const [count, setCount] = useState(0)
-  const timer = useRef<any>(null)
-const buttonRef = useRef<HTMLButtonElement>(null);
-  useEffect(() => {
-    //  timer.current =  setInterval(() => {
-    //   if (count > 10) {
-    //     clearInterval(timer.current)
-    //   }
-    //     setCount(prev=>prev + 1)
-    //   }, 1000);
-
-  }, [])
-
   return (
     <div className="page" onClick={()=>{
       console.log('11111')
